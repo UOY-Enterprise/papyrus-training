@@ -3,4 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Name: SysML RequirementsPlus Profile
 Bundle-SymbolicName: io.dimitris.papyrus.sysml.requirementsplus;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.eclipse.papyrus.uml.profile;bundle-version="2.0.0"
+Require-Bundle: org.eclipse.papyrus.uml.profile;bundle-version="2.0.0",
+ org.eclipse.papyrus.uml.diagram.common

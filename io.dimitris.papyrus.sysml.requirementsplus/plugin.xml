@@ -5,6 +5,7 @@
          point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
       <profile
             name="RequirementsPlus"
+            iconpath="icons/RequirementsPlus.gif"
             path="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/model.profile.uml">
       </profile>
    </extension>
@@ -14,6 +15,19 @@
             source="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/"
             target="platform:/plugin/io.dimitris.papyrus.sysml.requirementsplus/">
       </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.diagram.common.paletteDefinition">
+          <paletteDefinition 
+          		ID="io.dimitris.papyrus.sysml.requirementsplus.palette"
+        		class="org.eclipse.papyrus.uml.diagram.common.service.PluginPaletteProvider"
+        		icon="/icons/RequirementsPlus.gif" 
+        		name="RequirementsPlus Diagram Elements"
+        		path="palette.xml">
+        	
+        		<Priority name="Medium"/>
+        		<editor id="org.eclipse.papyrus.uml.diagram.clazz"/>
+    </paletteDefinition>
    </extension>
 
 </plugin>

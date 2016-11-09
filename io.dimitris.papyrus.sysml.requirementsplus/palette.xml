@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<paletteDefinition>
+    <content>
+        <drawer iconpath="/icons/RequirementsPlus" id="RequirementsPlus_Drawer" name="RequirementsPlus">
+            <aspectTool description="Create a RequirementPlus (Class)"
+                iconpath="platform:/plugin/io.dimitris.papyrus.sysml.requirementsplus/icons/RequirementPlus.gif"
+                id="clazz.tool.class_requirementsplus_requirementplus" 
+                name="RequirementPlus (Class)" 
+                refToolId="clazz.tool.class">
+                
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="RequirementsPlus::RequirementPlus" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+        </drawer>
+    </content>
+</paletteDefinition>
