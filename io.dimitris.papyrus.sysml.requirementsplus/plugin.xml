@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+      <profile
+            name="RequirementsPlus"
+            path="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/model.profile.uml">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/"
+            target="platform:/plugin/io.dimitris.papyrus.sysml.requirementsplus/">
+      </mapping>
+   </extension>
+
+</plugin>
