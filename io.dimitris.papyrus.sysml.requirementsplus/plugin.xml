@@ -4,9 +4,11 @@
    <extension
          point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
       <profile
-            name="RequirementsPlus"
+            description="Extension of the SysML profile"
             iconpath="icons/RequirementsPlus.gif"
-            path="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/model.profile.uml">
+            name="RequirementsPlus"
+            path="pathmap://resources/io.dimitris.papyrus.sysml.requirementsplus/model.profile.uml"
+            provider="University of York">
       </profile>
    </extension>
    <extension
