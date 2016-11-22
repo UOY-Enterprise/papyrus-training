@@ -1,6 +1,671 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_dF1G4KaqEea7fueVfsGj2g" name="RequirementsPlus">
   <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aUQhsKarEea7fueVfsGj2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_KWF1obA_EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_KWF1oLA_EeaB2JR5LtyW_g/20" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1orA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1o7A_EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1pLA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1u7A_EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1vLA_EeaB2JR5LtyW_g" key="Version" value="0.0.21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1vbA_EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1vrA_EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1v7A_EeaB2JR5LtyW_g" key="Date" value="2016-11-22"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1wLA_EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_KWF1pbA_EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1prA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_KWF1p7A_EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1qLA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1qbA_EeaB2JR5LtyW_g" key="body" value="self.verified implies (not self.justification.oclIsUndefined() and self.justification.size() > 10)"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_KWF1q7A_EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1rLA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1rbA_EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_KWF1r7A_EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KWF1sLA_EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KWF1sbA_EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_KWF1srA_EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_KWF1s7A_EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_KWF1tLA_EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_KWF1tbA_EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_KWF1t7A_EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_T9yXYLA5EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_T9xwULA5EeaB2JR5LtyW_g/19" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXYbA5EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXYrA5EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXY7A5EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXerA5EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXe7A5EeaB2JR5LtyW_g" key="Version" value="0.0.20"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXfLA5EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXfbA5EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXfrA5EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXf7A5EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T9yXZLA5EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXZbA5EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_T9yXZrA5EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXZ7A5EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXaLA5EeaB2JR5LtyW_g" key="body" value="self.verified implies (not self.justification.oclIsUndefined() and self.justification.size() > 10)"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_T9yXarA5EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXa7A5EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXbLA5EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_T9yXbrA5EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T9yXb7A5EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T9yXcLA5EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_T9yXcbA5EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_T9yXcrA5EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_T9yXc7A5EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T9yXdLA5EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T9yXdrA5EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_GrhQEbA5EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_GrhQELA5EeaB2JR5LtyW_g/18" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GrhQErA5EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GrhQG7A5EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GrhQHLA5EeaB2JR5LtyW_g" key="Version" value="0.0.19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GrhQHbA5EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GrhQHrA5EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GrhQH7A5EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GrhQILA5EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_GrhQE7A5EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GrhQFLA5EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_GrhQFbA5EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_GrhQF7A5EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_32c5QbA4EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_32c5QLA4EeaB2JR5LtyW_g/17" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_32c5QrA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_32c5SbA4EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_32c5SrA4EeaB2JR5LtyW_g" key="Version" value="0.0.18"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_32c5S7A4EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_32c5TLA4EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_32c5TbA4EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_32c5TrA4EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_32c5Q7A4EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_32c5RLA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_32c5RbA4EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_mjp7wbA4EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_mjp7wLA4EeaB2JR5LtyW_g/16" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp7wrA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjp7w7A4EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp7xLA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjqi0LA4EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjqi0bA4EeaB2JR5LtyW_g" key="Version" value="0.0.17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjqi0rA4EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjqi07A4EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjqi1LA4EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjqi1bA4EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_mjp7xbA4EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp7xrA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_mjp7x7A4EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp7yLA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjp7ybA4EeaB2JR5LtyW_g" key="body" value="self.verified implies (not self.justification.oclIsUndefined() and self.justification.size() > 10)"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_mjp7y7A4EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp7zLA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjp7zbA4EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_mjp7z7A4EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mjp70LA4EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mjp70bA4EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_mjp70rA4EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_mjp707A4EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_mjp71LA4EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_mjp71bA4EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_mjp717A4EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_rFyfobA3EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_rFyfoLA3EeaB2JR5LtyW_g/15" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyforA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfo7A3EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfpLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfu7A3EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfvLA3EeaB2JR5LtyW_g" key="Version" value="0.0.16"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfvbA3EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfvrA3EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfv7A3EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfwLA3EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_rFyfpbA3EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfprA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_rFyfp7A3EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfqLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfqbA3EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification.size() > 10"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_rFyfq7A3EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfrLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfrbA3EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_rFyfr7A3EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFyfsLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFyfsbA3EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_rFyfsrA3EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_rFyfs7A3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_rFyftLA3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_rFyftbA3EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_rFyft7A3EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_l21HcbA3EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_l21HcLA3EeaB2JR5LtyW_g/14" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HcrA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21Hc7A3EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HdLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21ugbA3EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21ugrA3EeaB2JR5LtyW_g" key="Version" value="0.0.15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21ug7A3EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21uhLA3EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21uhbA3EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21uhrA3EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_l21HdbA3EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HdrA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_l21Hd7A3EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HeLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21HebA3EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_l21He7A3EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HfLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21HfbA3EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_l21Hf7A3EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l21HgLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l21HgbA3EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_l21HgrA3EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_l21Hg7A3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_l21HhLA3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_l21HhbA3EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_l21Hh7A3EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_W5OfsbA3EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_W5OfsLA3EeaB2JR5LtyW_g/13" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OfsrA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5Ofs7A3EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OftLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5PGwbA3EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5PGwrA3EeaB2JR5LtyW_g" key="Version" value="0.0.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5PGw7A3EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5PGxLA3EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5PGxbA3EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5PGxrA3EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_W5OftbA3EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OftrA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_W5Oft7A3EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OfuLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5OfubA3EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_W5Ofu7A3EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OfvLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5OfvbA3EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_W5Ofv7A3EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W5OfwLA3EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W5OfwbA3EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_W5OfwrA3EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_W5Ofw7A3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_W5OfxLA3EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_W5OfxbA3EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_W5Ofx7A3EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_fuDn0LA2EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_fuDAwLA2EeaB2JR5LtyW_g/12" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn0bA2EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuDn0rA2EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn07A2EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuEO4bA2EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuEO4rA2EeaB2JR5LtyW_g" key="Version" value="0.0.13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuEO47A2EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuEO5LA2EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuEO5bA2EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuEO5rA2EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_fuDn1LA2EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn1bA2EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_fuDn1rA2EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn17A2EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuDn2LA2EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_fuDn2rA2EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn27A2EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuDn3LA2EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_fuDn3rA2EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuDn37A2EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fuDn4LA2EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_fuDn4bA2EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_fuDn4rA2EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_fuDn47A2EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_fuDn5LA2EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_fuDn5rA2EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_NmMDgbA2EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_NmMDgLA2EeaB2JR5LtyW_g/11" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NmMDgrA2EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NmMqkLA2EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NmMqkbA2EeaB2JR5LtyW_g" key="Version" value="0.0.12"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NmMqkrA2EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NmMqk7A2EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NmMqlLA2EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NmMqlbA2EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_NmMDg7A2EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NmMDhLA2EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_NmMDhbA2EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_NmMDh7A2EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_88BzUbA1EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_88BzULA1EeaB2JR5LtyW_g/10" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_88BzUrA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_88BzWbA1EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_88BzWrA1EeaB2JR5LtyW_g" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_88BzW7A1EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_88BzXLA1EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_88BzXbA1EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_88BzXrA1EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_88BzU7A1EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_88BzVLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_88BzVbA1EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_6mRc4bA1EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_6mRc4LA1EeaB2JR5LtyW_g/9" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6mRc4rA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6mSD8LA1EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mSD8bA1EeaB2JR5LtyW_g" key="Version" value="0.0.10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mSD8rA1EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mSD87A1EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mSD9LA1EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6mSD9bA1EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6mRc47A1EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6mRc5LA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_6mRc5bA1EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_6mRc57A1EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_k19LMbA1EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_k19LMLA1EeaB2JR5LtyW_g/8" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LMrA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19LM7A1EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LNLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19yQbA1EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19yQrA1EeaB2JR5LtyW_g" key="Version" value="0.0.9"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19yQ7A1EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19yRLA1EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19yRbA1EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19yRrA1EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_k19LNbA1EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LNrA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_k19LN7A1EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LOLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19LObA1EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10 "/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_k19LO7A1EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LPLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19LPbA1EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_k19LP7A1EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k19LQLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k19LQbA1EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_k19LQrA1EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_k19LQ7A1EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_k19LRLA1EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_k19LRbA1EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_k19LR7A1EeaB2JR5LtyW_g" name="justification" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_OaFbEbA1EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_OaFbELA1EeaB2JR5LtyW_g/7" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbErA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaFbE7A1EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbFLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaGCIbA1EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaGCIrA1EeaB2JR5LtyW_g" key="Version" value="0.0.8"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaGCI7A1EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaGCJLA1EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaGCJbA1EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaGCJrA1EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_OaFbFbA1EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbFrA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_OaFbF7A1EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbGLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaFbGbA1EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10 "/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_OaFbG7A1EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbHLA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaFbHbA1EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_OaFbH7A1EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OaFbILA1EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OaFbIbA1EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_OaFbIrA1EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_OaFbI7A1EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_OaFbJLA1EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_OaFbJbA1EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_OaFbJ7A1EeaB2JR5LtyW_g" name="justification" ordered="false" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_3SplcbA0EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_3SplcLA0EeaB2JR5LtyW_g/6" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SplcrA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3Splc7A0EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SpldLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SqzkLA0EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SqzkbA0EeaB2JR5LtyW_g" key="Version" value="0.0.7"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SqzkrA0EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3Sqzk7A0EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SqzlLA0EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SqzlbA0EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3SpldbA0EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SpldrA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_3Spld7A0EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SpleLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SplebA0EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10 "/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_3Sple7A0EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SplfLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SplfbA0EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_3Splf7A0EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SplgLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SplgbA0EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_3SplgrA0EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_3Splg7A0EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_3SplhLA0EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3SplhbA0EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3Splh7A0EeaB2JR5LtyW_g" name="justification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_uVD_YbA0EeaB2JR5LtyW_g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_uVD_YLA0EeaB2JR5LtyW_g/5" nsPrefix="RequirementsPlus">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_YrA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVD_Y7A0EeaB2JR5LtyW_g" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_ZLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/4.1.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVEmcbA0EeaB2JR5LtyW_g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVEmcrA0EeaB2JR5LtyW_g" key="Version" value="0.0.6"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVEmc7A0EeaB2JR5LtyW_g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVEmdLA0EeaB2JR5LtyW_g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVEmdbA0EeaB2JR5LtyW_g" key="Date" value="2016-11-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVEmdrA0EeaB2JR5LtyW_g" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_uVD_ZbA0EeaB2JR5LtyW_g" name="RequirementPlus">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_ZrA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1-JO0KarEea7fueVfsGj2g"/>
+        <eSuperTypes xmi:type="ecore:EClass" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements/Requirement"/>
+        <eOperations xmi:type="ecore:EOperation" xmi:id="_uVD_Z7A0EeaB2JR5LtyW_g" name="JustificationSize">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_aLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVD_abA0EeaB2JR5LtyW_g" key="body" value="self.verified implies self.justification->size() > 10"/>
+          </eAnnotations>
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_uVD_a7A0EeaB2JR5LtyW_g" name="diagnostics">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_bLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVD_bbA0EeaB2JR5LtyW_g" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+          </eParameters>
+          <eParameters xmi:type="ecore:EParameter" xmi:id="_uVD_b7A0EeaB2JR5LtyW_g" name="context">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uVD_cLA0EeaB2JR5LtyW_g" source="http://www.eclipse.org/emf/2002/GenModel">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uVD_cbA0EeaB2JR5LtyW_g" key="documentation" value="The cache of context-specific information."/>
+            </eAnnotations>
+            <eGenericType xmi:type="ecore:EGenericType" xmi:id="_uVD_crA0EeaB2JR5LtyW_g">
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_uVD_c7A0EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_uVD_dLA0EeaB2JR5LtyW_g">
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+              </eTypeArguments>
+              <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+            </eGenericType>
+          </eParameters>
+        </eOperations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_uVD_dbA0EeaB2JR5LtyW_g" name="verified" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_uVD_d7A0EeaB2JR5LtyW_g" name="justification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_cvubkabMEea7fueVfsGj2g" name="RequirementsPlus" nsURI="http:///schemas/RequirementsPlus/_cvubkKbMEea7fueVfsGj2g/4" nsPrefix="RequirementsPlus">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cvubkqbMEea7fueVfsGj2g" source="http://www.eclipse.org/uml2/4.1.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
@@ -62,11 +727,22 @@
     </contents>
   </eAnnotations>
   <packagedElement xmi:type="uml:Stereotype" xmi:id="_1-JO0KarEea7fueVfsGj2g" name="RequirementPlus">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_KdiJILA5EeaB2JR5LtyW_g" name="JustificationSize">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_SX-3MLA5EeaB2JR5LtyW_g">
+        <language>OCL</language>
+        <body>self.verified implies (not self.justification.oclIsUndefined() and self.justification.size() > 10)</body>
+      </specification>
+    </ownedRule>
     <generalization xmi:type="uml:Generalization" xmi:id="_8wGDwKarEea7fueVfsGj2g">
       <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements.stereotype_packagedElement_Requirement"/>
     </generalization>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_-UJQcKarEea7fueVfsGj2g" name="verified">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="___L68LA4EeaB2JR5LtyW_g" name="justification">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F5NCULA5EeaB2JR5LtyW_g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F5OQcLA5EeaB2JR5LtyW_g" value="1"/>
     </ownedAttribute>
   </packagedElement>
 </uml:Profile>
